@@ -1,0 +1,108 @@
+/* Reset all margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Clean, readable font */
+}
+
+/* Body setup with a light background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f8ff, #e0f7fa); /* Light gradient */
+    color: #333; /* Darker text for readability */
+}
+
+/* Main container for the converter */
+.convertor-container {
+    background: #ffffff; /* White background for the form container */
+    border-radius: 8px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1), 0px 10px 15px rgba(0, 0, 0, 0.05); /* Added a more subtle box shadow */
+    backdrop-filter: blur(8px);
+    padding: 24px 30px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Container width */
+}
+
+/* Title styles */
+.convertor-container h1 {
+    font-size: 28px;
+    text-decoration: underline;
+    color: #2c3e50; /* Darker color for better visibility */
+    margin-bottom: 40px;
+}
+
+/* Styling for input containers */
+.convertor-container .input-container {
+    border: 2px solid #e0e0e0; /* Light gray border */
+    border-radius: 4px;
+    margin-bottom: 20px; /* Consistent spacing */
+    padding: 5px;
+}
+
+.convertor-container .input-container:focus-within {
+    border-color: #3498db; /* Blue border when focused */
+}
+
+/* Styling for input/select elements */
+.convertor-container .input-container select,
+.convertor-container .input-container input {
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    padding: 8px;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-top: 5px;
+    transition: border 0.3s ease;
+}
+
+/* Hover effect for input/select elements */
+.convertor-container .input-container input:hover,
+.convertor-container .input-container select:hover {
+    border: 2px solid #3498db; /* Blue hover effect */
+}
+
+/* Arrow between the inputs */
+.convertor-container .arrow {
+    font-size: 44px;
+    transform: rotate(90deg);
+    margin: 20px 0;
+}
+
+/* Result text styling */
+.convertor-container .result {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 440px) {
+    .convertor-container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .convertor-container h1 {
+        font-size: 22px;
+    }
+
+    /* Remove borders from inputs on small screens */
+    .convertor-container .input-container {
+        border: none;
+    }
+
+    .convertor-container .input-container input,
+    .convertor-container .input-container select {
+        border: 1px solid #ccc; /* Light border on mobile */
+        margin-block: 4px;
+        width: 100%;
+    }
+}
